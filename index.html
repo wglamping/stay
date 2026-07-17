@@ -15,7 +15,7 @@
     BEFORE PUBLISHING
     1. Add the Make/MailerLite webhook to CONFIG.leadEndpoint near the bottom.
     2. Create a 10% promotion in Hospitable for first direct stays of 2+ nights.
-    3. Confirm CONFIG.solBookingUrl.
+    3. Confirm CONFIG.bookingUrl.
     4. Point stay.gowanderglamping.com to the Vercel deployment.
   -->
 
@@ -457,7 +457,7 @@
             <strong>WANDER</strong>
             <span>Glamping</span>
           </a>
-          <a class="ready-link" data-book-sol href="https://wanderglamping.hospitable.rentals/property/sol">Already ready? Check dates →</a>
+          <a class="ready-link" data-book-wander href="https://wanderglamping.hospitable.rentals">Already ready? Check dates →</a>
         </div>
       </div>
 
@@ -486,7 +486,7 @@
             <div class="form-note">Valid on a qualifying first direct stay of two nights or more. Not combinable with other offers. Unsubscribe anytime.</div>
             <div class="form-status" role="status" aria-live="polite"></div>
           </form>
-          <div class="booking-alternative">Prefer to choose dates now? <a data-book-sol href="https://wanderglamping.hospitable.rentals/property/sol">View live availability</a></div>
+          <div class="booking-alternative">Prefer to choose dates now? <a data-book-wander href="https://wanderglamping.hospitable.rentals">View live availability</a></div>
         </div>
       </div>
 
@@ -505,7 +505,7 @@
         <div class="section-head">
           <div class="eyebrow">Find your Wander</div>
           <h2>Two stays. No ordinary rooms.</h2>
-          <p>Choose an intimate architectural retreat built for two, or join the reopening list for Texas's largest luxury glamping dome.</p>
+          <p>Choose an intimate architectural retreat built for two or Texas's largest luxury glamping dome, then see current availability in one calendar.</p>
         </div>
 
         <div class="stay-grid">
@@ -520,7 +520,7 @@
               <p>The first O-Frame cabin of its kind in the United States. Private cedar hot tub, glass-front sauna, outdoor shower, and architecture that turns the forest into the view.</p>
               <div class="stay-actions">
                 <a class="btn btn-light" href="https://sol.gowanderglamping.com">Explore SOL <span class="arrow">→</span></a>
-                <a class="btn btn-outline-light" data-book-sol href="https://wanderglamping.hospitable.rentals/property/sol">Check availability</a>
+                <a class="btn btn-outline-light" data-book-wander href="https://wanderglamping.hospitable.rentals">Check availability</a>
               </div>
             </div>
           </article>
@@ -528,7 +528,7 @@
           <article class="stay-card bali">
             <div class="stay-content">
               <div class="stay-labels">
-                <span class="stay-label">Reopening soon</span>
+                <span class="stay-label">Private dome</span>
                 <span class="stay-label">Sleeps 4</span>
                 <span class="stay-label">850 sq ft</span>
               </div>
@@ -536,7 +536,7 @@
               <p>An expansive private dome with an 18-foot forest window, retractable skylight, imported Indonesian craftsmanship, and a hot tub under the stars.</p>
               <div class="stay-actions">
                 <a class="btn btn-light" href="https://bali.gowanderglamping.com">Explore Bali <span class="arrow">→</span></a>
-                <a class="btn btn-outline-light" href="#private-rate">Join reopening list</a>
+                <a class="btn btn-outline-light" data-book-wander href="https://wanderglamping.hospitable.rentals">Check availability</a>
               </div>
             </div>
           </article>
@@ -655,7 +655,7 @@
           <details><summary>Is Cabin SOL private?</summary><p>Yes. SOL has its own private outdoor living area, cedar hot tub, glass-front sauna, fire feature, and outdoor shower surrounded by the East Texas landscape.</p></details>
           <details><summary>How does the 10% private rate work?</summary><p>After subscribing, you will receive a direct-booking promotional code by email. It is valid on a qualifying first direct stay of two nights or more, cannot be combined with another promotion, and may exclude holidays or other blackout dates.</p></details>
           <details><summary>Why book directly?</summary><p>Direct guests receive access to Wander-only offers and communicate directly with the hosting team. Always compare the complete checkout total and cancellation terms before booking.</p></details>
-          <details><summary>Is the Bali Dome currently available?</summary><p>The Bali Dome is temporarily offline for restoration. Join the Wander list and we'll notify subscribers before new dates are released publicly.</p></details>
+          <details><summary>How do I see availability for both stays?</summary><p>Use our universal booking calendar to see current dates for both Cabin SOL and the Bali Dome. Select your dates and preferred stay there.</p></details>
         </div>
       </div>
     </section>
@@ -665,7 +665,7 @@
         <div class="final-copy">
           <div class="eyebrow" style="color:#d7ac79">Not ready to choose dates?</div>
           <h2>Keep Wander within reach.</h2>
-          <p>Unlock 10% off your first two-night direct stay and receive first notice of seasonal openings and the Bali Dome reopening.</p>
+          <p>Unlock 10% off your first two-night direct stay and receive first notice of seasonal openings and occasional Wander offers.</p>
         </div>
         <div class="final-form-card">
           <h3>Send my private rate</h3>
@@ -703,7 +703,7 @@
       <div class="sticky-copy"><strong>Ready for a quieter kind of getaway?</strong><span>See live Cabin SOL dates and complete pricing.</span></div>
       <div class="sticky-actions">
         <a class="btn btn-outline-dark" href="#private-rate">Unlock 10% Off</a>
-        <a class="btn btn-dark" data-book-sol href="https://wanderglamping.hospitable.rentals/property/sol">Check SOL Dates <span class="arrow">→</span></a>
+        <a class="btn btn-dark" data-book-wander href="https://wanderglamping.hospitable.rentals">Check All Dates <span class="arrow">→</span></a>
       </div>
     </div>
   </div>
@@ -712,7 +712,7 @@
     /* Add your Make/MailerLite JSON webhook here before publishing. */
     const CONFIG = {
       leadEndpoint: "",
-      solBookingUrl: "https://wanderglamping.hospitable.rentals/property/sol",
+      bookingUrl: "https://wanderglamping.hospitable.rentals",
       contactEmail: "info@gowanderglamping.com"
     };
 
@@ -732,10 +732,10 @@
       window.dataLayer.push({ event, ...params });
     };
 
-    document.querySelectorAll("[data-book-sol]").forEach(link => {
-      link.href = CONFIG.solBookingUrl;
+    document.querySelectorAll("[data-book-wander]").forEach(link => {
+      link.href = CONFIG.bookingUrl;
       link.addEventListener("click", () => track("stay_booking_click", {
-        property: "sol",
+        property: "all_stays",
         placement: link.closest(".hero") ? "hero" : link.closest(".sticky-bar") ? "sticky" : "page",
         ...attribution
       }));
