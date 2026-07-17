@@ -40,6 +40,29 @@
     })(window,document,'clarity','script','w3z38r6z3m');
   </script>
 
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HWS036TGT7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-HWS036TGT7');
+  </script>
+
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '9865529503490887');
+    fbq('track', 'PageView');
+  </script>
+
   <style>
     :root {
       --forest: #142018;
@@ -447,6 +470,7 @@
 
 <body>
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KP3CB263" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=9865529503490887&amp;ev=PageView&amp;noscript=1"></noscript>
 
   <main>
     <header class="hero" id="top">
@@ -738,11 +762,20 @@
         if (attribution[key]) bookingUrl.searchParams.set(key, attribution[key]);
       });
       link.href = bookingUrl.toString();
-      link.addEventListener("click", () => track("stay_booking_click", {
-        property: "all_stays",
-        placement: link.closest(".hero") ? "hero" : link.closest(".sticky-bar") ? "sticky" : "page",
-        ...attribution
-      }));
+      link.addEventListener("click", () => {
+        const placement = link.closest(".hero") ? "hero" : link.closest(".sticky-bar") ? "sticky" : "page";
+        track("stay_booking_click", { property: "all_stays", placement, ...attribution });
+        if (typeof window.fbq === "function") window.fbq("track", "InitiateCheckout", {
+          content_name: "Wander Glamping — All Stays",
+          content_category: "Direct booking",
+          currency: "USD"
+        });
+        if (typeof window.gtag === "function") window.gtag("event", "begin_checkout", {
+          property: "all_stays",
+          placement
+        });
+        if (typeof window.clarity === "function") window.clarity("event", "booking_click");
+      });
     });
 
     const setStatus = (form, type, message, allowHtml = false) => {
@@ -782,6 +815,14 @@
           setStatus(form, "success", `Success—your code is <strong>WANDER100</strong>. Check your inbox, or <a href="${CONFIG.bookingUrl}">view available dates now</a>.`, true);
           form.reset();
           track("generate_lead", { lead_type: formType, offer: payload.offer, ...attribution });
+          if (typeof window.fbq === "function") window.fbq("track", "Lead", {
+            content_name: "WANDER100",
+            content_category: "Direct booking offer"
+          });
+          if (typeof window.gtag === "function") window.gtag("event", "generate_lead", {
+            lead_type: formType,
+            offer: payload.offer
+          });
           if (typeof window.clarity === "function") window.clarity("event", `lead_${formType}`);
         } catch (error) {
           setStatus(form, "error", `Something went wrong. Please try again or email ${CONFIG.contactEmail}.`);
