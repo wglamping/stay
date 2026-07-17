@@ -1,0 +1,973 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Stay With Wander | Architecture, Privacy & Stillness Near Dallas</title>
+  <meta name="description" content="Discover Wander Glamping's architecture-forward private escapes on 15 wooded acres near Paris, Texas, just 90 minutes from Dallas.">
+  <meta name="theme-color" content="#172019">
+  <meta property="og:title" content="Stay With Wander | 90 Minutes From Dallas">
+  <meta property="og:description" content="Architecture worth traveling for. Private hot tubs, stillness, and design-forward stays on 15 secluded acres.">
+  <meta property="og:image" content="https://sol.gowanderglamping.com/images/sol/deckhoriz.jpg">
+  <meta property="og:type" content="website">
+
+  <!--
+    WANDER SETUP CHECKLIST
+    1. Set CONFIG.leadEndpoint near the bottom to your Make/MailerLite webhook.
+    2. Confirm CONFIG.solBookingUrl and CONFIG.baliUrl.
+    3. Create the WANDER50 promotion in Hospitable before advertising it.
+    4. Publish the giveaway rules at gowanderglamping.com/giveaway-rules.
+    5. Point stay.gowanderglamping.com to this deployment.
+  -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+
+  <!-- Google Tag Manager: inherited from the live SOL site -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KP3CB263');
+  </script>
+
+  <!-- Microsoft Clarity: inherited from the live SOL site -->
+  <script>
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src='https://www.clarity.ms/tag/'+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window,document,'clarity','script','w3z38r6z3m');
+  </script>
+
+  <style>
+    :root {
+      --forest: #172019;
+      --forest-2: #233029;
+      --moss: #596c57;
+      --sage: #a8b29d;
+      --cream: #f6f1e8;
+      --paper: #fcfaf5;
+      --sand: #dfd2bf;
+      --cedar: #b9653a;
+      --gold: #bd9861;
+      --ink: #182019;
+      --muted: #687069;
+      --white: #fff;
+      --line: rgba(23, 32, 25, .13);
+      --soft-line: rgba(255, 255, 255, .18);
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "DM Sans", Arial, sans-serif;
+      --display: "Manrope", Arial, sans-serif;
+      --max: 1180px;
+      --radius: 22px;
+      --shadow: 0 22px 70px rgba(23, 32, 25, .15);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: var(--sans);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    body.modal-open { overflow: hidden; }
+    img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    a { color: inherit; }
+    button, input, select { font: inherit; }
+    .wrap { width: min(var(--max), calc(100% - 42px)); margin-inline: auto; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 15px;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--cedar);
+    }
+    .eyebrow::before { content: ""; width: 26px; height: 1px; background: currentColor; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, h2, h3 { font-family: var(--serif); font-weight: 500; line-height: 1.04; }
+    h1 { font-size: clamp(3.7rem, 8vw, 7.6rem); letter-spacing: -.055em; }
+    h2 { font-size: clamp(2.65rem, 5.5vw, 5.1rem); letter-spacing: -.045em; }
+    h3 { font-size: clamp(1.65rem, 3vw, 2.65rem); letter-spacing: -.025em; }
+    p { margin-bottom: 0; }
+    section { padding: 104px 0; }
+    .section-head { max-width: 770px; margin-bottom: 45px; }
+    .section-head h2 { margin-bottom: 20px; }
+    .section-head p { color: var(--muted); font-size: 1.06rem; }
+
+    .btn {
+      min-height: 52px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 0 24px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      background: transparent;
+      text-decoration: none;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform .2s ease, background .2s ease, border-color .2s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-dark { background: var(--forest); color: var(--white); }
+    .btn-light { background: var(--white); color: var(--forest); }
+    .btn-cedar { background: var(--cedar); color: var(--white); }
+    .btn-outline-light { color: var(--white); border-color: rgba(255,255,255,.48); background: rgba(12,18,14,.2); backdrop-filter: blur(8px); }
+    .btn-outline-dark { color: var(--forest); border-color: rgba(23,32,25,.3); }
+    .arrow { font-size: 1.1em; transition: transform .2s ease; }
+    .btn:hover .arrow { transform: translateX(3px); }
+
+    .offer-strip {
+      position: relative;
+      z-index: 50;
+      padding: 9px 16px;
+      background: var(--forest);
+      color: var(--white);
+      text-align: center;
+      font-size: .76rem;
+      letter-spacing: .07em;
+    }
+    .offer-strip button { margin-left: 7px; padding: 0; border: 0; background: none; color: inherit; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; font-weight: 700; }
+
+    .site-nav {
+      position: absolute;
+      z-index: 40;
+      top: 36px;
+      left: 0;
+      right: 0;
+      padding: 22px 0;
+      color: var(--white);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 25px; }
+    .wordmark { text-decoration: none; display: inline-flex; flex-direction: column; line-height: 1; }
+    .wordmark strong { font-family: var(--display); font-size: 1.25rem; letter-spacing: .29em; font-weight: 700; }
+    .wordmark span { margin-top: 7px; font-size: .55rem; letter-spacing: .31em; text-transform: uppercase; opacity: .72; }
+    .nav-links { display: flex; align-items: center; gap: 26px; }
+    .nav-links > a:not(.btn) { color: inherit; text-decoration: none; font-size: .86rem; font-weight: 600; }
+    .nav-links .btn { min-height: 43px; padding-inline: 18px; }
+
+    .hero {
+      position: relative;
+      min-height: 91svh;
+      color: var(--white);
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      background: var(--forest);
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(7,11,8,.5) 0%, rgba(7,11,8,.06) 37%, rgba(7,11,8,.79) 100%),
+        url("https://sol.gowanderglamping.com/images/sol/deckhoriz.jpg") center 55% / cover no-repeat;
+      transform: scale(1.015);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 30%;
+      background: linear-gradient(transparent, rgba(8,12,9,.35));
+    }
+    .hero-content { position: relative; z-index: 2; padding: 175px 0 62px; max-width: 970px; }
+    .hero-kicker { font-size: .75rem; text-transform: uppercase; letter-spacing: .18em; font-weight: 700; opacity: .88; }
+    .hero h1 { max-width: 900px; margin: 15px 0 23px; text-shadow: 0 4px 30px rgba(0,0,0,.33); }
+    .hero-copy { max-width: 650px; font-size: clamp(1.02rem, 2vw, 1.25rem); color: rgba(255,255,255,.9); text-shadow: 0 2px 14px rgba(0,0,0,.4); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 11px; margin-top: 29px; }
+    .hero-proof { display: flex; flex-wrap: wrap; gap: 9px 17px; margin-top: 20px; color: rgba(255,255,255,.74); font-size: .77rem; }
+
+    .trust-rail { padding: 25px 0; background: var(--cream); border-bottom: 1px solid var(--line); }
+    .trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; align-items: center; }
+    .trust-item { text-align: center; }
+    .trust-item strong { display: block; font-family: var(--serif); font-size: 1.28rem; font-weight: 500; }
+    .trust-item span { display: block; margin-top: 4px; font-size: .67rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+
+    .escapes { background: var(--paper); }
+    .stay-grid { display: grid; grid-template-columns: 1.08fr .92fr; gap: 20px; }
+    .stay-card {
+      position: relative;
+      min-height: 650px;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      border-radius: var(--radius);
+      color: var(--white);
+      isolation: isolate;
+      box-shadow: var(--shadow);
+    }
+    .stay-card::before { content: ""; position: absolute; inset: 0; z-index: -2; transition: transform .7s ease; }
+    .stay-card:hover::before { transform: scale(1.025); }
+    .stay-card::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(7,11,8,.03) 35%, rgba(7,11,8,.88) 100%); }
+    .stay-card.sol::before { background: url("https://sol.gowanderglamping.com/images/sol/superwide.jpg") center / cover; }
+    .stay-card.bali::before { background: url("https://bali.gowanderglamping.com/hero-fallback.jpg") center / cover; }
+    .stay-content { padding: 34px; width: 100%; }
+    .stay-labels { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+    .stay-label { padding: 7px 10px; border: 1px solid rgba(255,255,255,.32); border-radius: 999px; background: rgba(10,16,12,.28); backdrop-filter: blur(9px); font-size: .68rem; letter-spacing: .07em; text-transform: uppercase; }
+    .stay-content h3 { font-size: clamp(2.35rem, 4.5vw, 4.3rem); margin-bottom: 13px; }
+    .stay-content p { max-width: 555px; color: rgba(255,255,255,.84); }
+    .stay-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 23px; }
+
+    .credit-section { background: var(--forest); color: var(--white); overflow: hidden; }
+    .credit-grid { display: grid; grid-template-columns: .92fr 1.08fr; gap: 70px; align-items: center; }
+    .credit-copy h2 { margin-bottom: 22px; }
+    .credit-copy p { color: rgba(255,255,255,.7); font-size: 1.06rem; max-width: 560px; }
+    .credit-fine { margin-top: 18px; font-size: .72rem !important; color: rgba(255,255,255,.47) !important; }
+    .form-card { position: relative; padding: 36px; border-radius: var(--radius); background: var(--cream); color: var(--ink); box-shadow: 0 30px 90px rgba(0,0,0,.2); }
+    .form-card::before { content: "$50"; position: absolute; top: -34px; right: 27px; font-family: var(--serif); font-size: 6rem; color: rgba(185,101,58,.14); line-height: 1; }
+    .form-card h3 { margin-bottom: 9px; }
+    .form-card > p { color: var(--muted); margin-bottom: 22px; }
+    .lead-form { display: grid; gap: 12px; }
+    .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .field { display: grid; gap: 7px; }
+    .field label { font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #59605a; }
+    .field input, .field select {
+      width: 100%;
+      height: 52px;
+      padding: 0 15px;
+      border: 1px solid rgba(23,32,25,.18);
+      border-radius: 12px;
+      background: var(--white);
+      color: var(--ink);
+      outline: none;
+    }
+    .field input:focus, .field select:focus { border-color: var(--moss); box-shadow: 0 0 0 3px rgba(89,108,87,.12); }
+    .lead-form .btn { width: 100%; margin-top: 3px; }
+    .consent { color: #747b75; font-size: .7rem; line-height: 1.45; }
+    .form-status { display: none; padding: 13px 14px; border-radius: 10px; font-size: .82rem; }
+    .form-status.success { display: block; background: #e2eadf; color: #274025; }
+    .form-status.error { display: block; background: #f5dfd7; color: #71331e; }
+
+    .difference { background: var(--cream); }
+    .difference-grid { display: grid; grid-template-columns: .86fr 1.14fr; gap: 70px; align-items: start; }
+    .difference-copy { position: sticky; top: 30px; }
+    .difference-copy h2 { margin-bottom: 21px; }
+    .difference-copy p { color: var(--muted); font-size: 1.05rem; }
+    .difference-list { display: grid; }
+    .difference-item { display: grid; grid-template-columns: 72px 1fr; gap: 23px; padding: 29px 0; border-top: 1px solid var(--line); }
+    .difference-item:last-child { border-bottom: 1px solid var(--line); }
+    .difference-num { font-family: var(--serif); font-size: 2.7rem; color: var(--cedar); line-height: .9; }
+    .difference-item h3 { font-size: 1.62rem; margin-bottom: 10px; }
+    .difference-item p { color: var(--muted); }
+
+    .split-story { display: grid; grid-template-columns: 1fr 1fr; min-height: 720px; background: var(--paper); }
+    .split-image { min-height: 610px; }
+    .split-image img { object-position: center; }
+    .split-copy { display: flex; align-items: center; padding: 80px max(36px, calc((100vw - var(--max))/2)); padding-left: clamp(40px, 6vw, 95px); }
+    .split-inner { max-width: 520px; }
+    .split-copy h2 { margin-bottom: 21px; }
+    .split-copy p { color: var(--muted); font-size: 1.05rem; }
+    .press-chips { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 28px; }
+    .press-chip { padding: 9px 12px; border: 1px solid var(--line); border-radius: 999px; font-size: .69rem; letter-spacing: .08em; text-transform: uppercase; font-weight: 700; }
+
+    .giveaway { position: relative; color: var(--white); overflow: hidden; background: var(--forest-2); }
+    .giveaway::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(16,22,17,.92) 0%, rgba(16,22,17,.64) 48%, rgba(16,22,17,.18) 100%), url("https://sol.gowanderglamping.com/images/sol/hottub.jpg") center / cover; }
+    .giveaway .wrap { position: relative; z-index: 2; }
+    .giveaway-grid { display: grid; grid-template-columns: .95fr 1.05fr; gap: 65px; align-items: center; }
+    .giveaway-copy h2 { margin-bottom: 21px; }
+    .giveaway-copy p { max-width: 560px; color: rgba(255,255,255,.76); }
+    .giveaway-steps { display: grid; gap: 14px; margin-top: 25px; }
+    .giveaway-step { display: flex; align-items: center; gap: 13px; font-size: .9rem; }
+    .giveaway-step span { width: 31px; height: 31px; flex: 0 0 31px; border: 1px solid rgba(255,255,255,.34); border-radius: 50%; display: grid; place-items: center; font-family: var(--serif); }
+    .giveaway .form-card { background: rgba(246,241,232,.96); backdrop-filter: blur(16px); }
+    .giveaway .form-card::before { content: "WIN"; }
+
+    .location { background: var(--paper); }
+    .location-grid { display: grid; grid-template-columns: .82fr 1.18fr; gap: 70px; align-items: center; }
+    .location-copy h2 { margin-bottom: 20px; }
+    .location-copy p { color: var(--muted); font-size: 1.05rem; }
+    .distance-list { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 28px; }
+    .distance { padding: 18px; border: 1px solid var(--line); border-radius: 15px; background: var(--cream); }
+    .distance strong { display: block; font-family: var(--serif); font-size: 1.65rem; font-weight: 500; }
+    .distance span { font-size: .75rem; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
+    .location-art { position: relative; min-height: 520px; border-radius: 180px 180px 22px 22px; overflow: hidden; }
+    .location-art img { object-position: center; }
+    .location-badge { position: absolute; right: 22px; bottom: 22px; max-width: 220px; padding: 18px; border-radius: 16px; background: rgba(252,250,245,.94); backdrop-filter: blur(12px); box-shadow: var(--shadow); }
+    .location-badge strong { font-family: var(--serif); display: block; font-size: 1.28rem; font-weight: 500; }
+    .location-badge span { display: block; margin-top: 6px; color: var(--muted); font-size: .75rem; }
+
+    .reviews { background: var(--cream); }
+    .review-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .review-card { min-height: 300px; display: flex; flex-direction: column; padding: 27px; border-radius: 18px; background: var(--white); }
+    .stars { letter-spacing: .13em; color: var(--cedar); font-size: .8rem; }
+    .review-card blockquote { margin: 20px 0; font-family: var(--serif); font-size: 1.38rem; line-height: 1.35; flex: 1; }
+    .review-card cite { font-style: normal; color: var(--muted); font-size: .75rem; }
+
+    .faq { background: var(--paper); }
+    .faq-grid { display: grid; grid-template-columns: .75fr 1.25fr; gap: 70px; align-items: start; }
+    .faq-copy h2 { margin-bottom: 18px; }
+    .faq-copy p { color: var(--muted); }
+    .faq-list details { border-top: 1px solid var(--line); padding: 21px 0; }
+    .faq-list details:last-child { border-bottom: 1px solid var(--line); }
+    .faq-list summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; gap: 20px; font-weight: 700; }
+    .faq-list summary::-webkit-details-marker { display: none; }
+    .faq-list summary::after { content: "+"; font-family: var(--serif); font-size: 1.45rem; font-weight: 400; }
+    .faq-list details[open] summary::after { content: "−"; }
+    .faq-list details p { padding-top: 13px; color: var(--muted); }
+
+    .final-credit { background: var(--cedar); color: var(--white); text-align: center; }
+    .final-credit-inner { max-width: 800px; margin: 0 auto; }
+    .final-credit h2 { margin-bottom: 18px; }
+    .final-credit p { max-width: 610px; margin-inline: auto; color: rgba(255,255,255,.82); }
+    .final-credit .btn { margin-top: 27px; }
+
+    footer { padding: 53px 0 100px; background: var(--forest); color: var(--white); }
+    .footer-grid { display: grid; grid-template-columns: 1fr auto; gap: 35px; align-items: end; }
+    .footer-brand strong { font-family: var(--display); font-size: 1.45rem; letter-spacing: .27em; }
+    .footer-brand p { margin-top: 10px; color: rgba(255,255,255,.56); font-size: .78rem; }
+    .footer-links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 18px; }
+    .footer-links a { color: rgba(255,255,255,.72); text-decoration: none; font-size: .78rem; }
+
+    .sticky-bar {
+      position: fixed;
+      z-index: 90;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(252,250,245,.94);
+      backdrop-filter: blur(15px);
+      border-top: 1px solid var(--line);
+      transform: translateY(105%);
+      transition: transform .25s ease;
+    }
+    .sticky-bar.visible { transform: translateY(0); }
+    .sticky-inner { min-height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .sticky-copy strong { display: block; font-family: var(--serif); font-size: 1.2rem; font-weight: 500; }
+    .sticky-copy span { display: block; color: var(--muted); font-size: .72rem; }
+    .sticky-actions { display: flex; gap: 9px; }
+    .sticky-actions .btn { min-height: 44px; padding-inline: 18px; }
+
+    .modal {
+      position: fixed;
+      z-index: 1000;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      padding: 18px;
+      background: rgba(7,11,8,.72);
+      backdrop-filter: blur(10px);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .22s ease;
+    }
+    .modal.open { opacity: 1; pointer-events: auto; }
+    .modal-panel { position: relative; width: min(560px, 100%); max-height: min(760px, 92svh); overflow: auto; border-radius: 22px; background: var(--cream); box-shadow: 0 30px 100px rgba(0,0,0,.35); transform: translateY(14px); transition: transform .22s ease; }
+    .modal.open .modal-panel { transform: translateY(0); }
+    .modal-close { position: absolute; z-index: 3; top: 13px; right: 13px; width: 41px; height: 41px; display: grid; place-items: center; border: 0; border-radius: 50%; background: rgba(255,255,255,.9); color: var(--forest); font-size: 1.35rem; cursor: pointer; }
+    .modal-image { height: 210px; }
+    .modal-content { padding: 29px; }
+    .modal-content h3 { margin-bottom: 9px; }
+    .modal-content > p { margin-bottom: 21px; color: var(--muted); }
+
+    .route-flash { animation: routePulse 1.3s ease; }
+    @keyframes routePulse { 0%, 100% { box-shadow: inherit; } 35% { box-shadow: 0 0 0 8px rgba(185,101,58,.25), var(--shadow); } }
+
+    @media (max-width: 950px) {
+      .nav-links > a:not(.btn) { display: none; }
+      .stay-grid, .credit-grid, .difference-grid, .giveaway-grid, .location-grid, .faq-grid { grid-template-columns: 1fr; }
+      .stay-card { min-height: 600px; }
+      .difference-copy { position: static; }
+      .split-story { grid-template-columns: 1fr; }
+      .split-image { min-height: 560px; }
+      .split-copy { padding: 75px max(28px, calc((100vw - var(--max))/2)); }
+      .review-grid { grid-template-columns: 1fr 1fr; }
+      .location-art { min-height: 580px; }
+    }
+
+    @media (max-width: 640px) {
+      .wrap { width: min(var(--max), calc(100% - 26px)); }
+      section { padding: 75px 0; }
+      .offer-strip { font-size: .67rem; line-height: 1.35; }
+      .site-nav { top: 46px; padding-top: 15px; }
+      .wordmark strong { font-size: 1.05rem; }
+      .wordmark span { font-size: .48rem; }
+      .nav-links .btn { min-height: 40px; padding: 0 14px; font-size: .78rem; }
+      .hero { min-height: 87svh; }
+      .hero::before { background: linear-gradient(180deg, rgba(7,11,8,.51) 0%, rgba(7,11,8,.05) 34%, rgba(7,11,8,.82) 100%), url("https://sol.gowanderglamping.com/images/sol/deckvertical.jpg") center 44% / cover no-repeat; }
+      .hero-content { padding: 145px 0 42px; }
+      .hero h1 { font-size: clamp(3.45rem, 17vw, 5rem); }
+      .hero-actions .btn { width: 100%; }
+      .hero-proof { gap: 6px 13px; }
+      .trust-grid { grid-template-columns: 1fr 1fr; gap: 19px 9px; }
+      .stay-grid { gap: 14px; }
+      .stay-card { min-height: 570px; }
+      .stay-card.sol::before { background-image: url("https://sol.gowanderglamping.com/images/sol/deckvertical.jpg"); }
+      .stay-content { padding: 24px; }
+      .stay-actions .btn { width: 100%; }
+      .form-card { padding: 25px 20px; }
+      .form-card::before { top: -21px; font-size: 4.8rem; }
+      .field-row { grid-template-columns: 1fr; }
+      .difference-item { grid-template-columns: 52px 1fr; gap: 15px; }
+      .difference-num { font-size: 2.2rem; }
+      .split-image { min-height: 500px; }
+      .split-copy { padding: 70px 22px; }
+      .giveaway::before { background: linear-gradient(180deg, rgba(16,22,17,.78), rgba(16,22,17,.95)), url("https://sol.gowanderglamping.com/images/sol/hottub.jpg") center / cover; }
+      .distance-list { grid-template-columns: 1fr 1fr; }
+      .location-art { min-height: 480px; border-radius: 130px 130px 20px 20px; }
+      .review-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; align-items: start; }
+      .footer-links { justify-content: flex-start; }
+      .sticky-bar { left: 10px; right: 10px; bottom: 10px; border: 0; border-radius: 17px; box-shadow: 0 18px 45px rgba(0,0,0,.22); }
+      .sticky-inner { width: 100%; min-height: auto; padding: 9px; }
+      .sticky-copy { display: none; }
+      .sticky-actions { width: 100%; }
+      .sticky-actions .btn-outline-dark { display: none; }
+      .sticky-actions .btn-dark { width: 100%; min-height: 49px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Google Tag Manager noscript -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KP3CB263" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <div class="offer-strip">
+    New here? Unlock $50 toward your first qualifying direct stay.
+    <button type="button" data-open-credit>Get the credit</button>
+  </div>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="wrap nav-inner">
+      <a class="wordmark" href="#top" aria-label="Wander Glamping home">
+        <strong>WANDER</strong>
+        <span>Glamping</span>
+      </a>
+      <div class="nav-links">
+        <a href="#stays">Our stays</a>
+        <a href="#why-wander">Why Wander</a>
+        <a href="#location">Location</a>
+        <a class="btn btn-light" data-book-sol href="https://wanderglamping.hospitable.rentals/property/sol">Check dates <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top">
+    <header class="hero">
+      <div class="wrap hero-content">
+        <div class="hero-kicker">Paris, Texas · 90 minutes from Dallas</div>
+        <h1>Go somewhere<br>that changes your pace.</h1>
+        <p class="hero-copy">Architecture-forward private escapes on 15 wooded acres. Built for stillness, reconnection, and the rare luxury of having nowhere else to be.</p>
+        <div class="hero-actions">
+          <a class="btn btn-light" href="#stays">Find your escape <span class="arrow">→</span></a>
+          <button class="btn btn-outline-light" type="button" data-open-credit>Unlock $50 direct credit</button>
+        </div>
+        <div class="hero-proof">
+          <span>✦ Private hot tubs</span>
+          <span>✦ 15 secluded acres</span>
+          <span>✦ Self check-in</span>
+          <span>✦ Design recognized by Dwell and AD México</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="trust-rail" aria-label="Wander credentials">
+      <div class="wrap trust-grid">
+        <div class="trust-item"><strong>90 min</strong><span>From Dallas</span></div>
+        <div class="trust-item"><strong>4.96★</strong><span>Guest rating</span></div>
+        <div class="trust-item"><strong>15 acres</strong><span>Private setting</span></div>
+        <div class="trust-item"><strong>Top 5%</strong><span>Airbnb Most Loved Home</span></div>
+      </div>
+    </div>
+
+    <section class="escapes" id="stays">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Find your Wander</div>
+          <h2>Two stays. No ordinary rooms.</h2>
+          <p>Choose the intimate architectural retreat built for two, or join the reopening list for Texas's largest luxury glamping dome.</p>
+        </div>
+
+        <div class="stay-grid">
+          <article class="stay-card sol">
+            <div class="stay-content">
+              <div class="stay-labels">
+                <span class="stay-label">Now booking</span>
+                <span class="stay-label">Sleeps 2</span>
+                <span class="stay-label">Adults-focused</span>
+              </div>
+              <h3>Cabin SOL</h3>
+              <p>The first O-Frame cabin of its kind in the United States. Private cedar hot tub, glass-front sauna, outdoor shower, and architecture that turns the forest into the view.</p>
+              <div class="stay-actions">
+                <a class="btn btn-light" href="https://sol.gowanderglamping.com">Explore SOL <span class="arrow">→</span></a>
+                <a class="btn btn-outline-light" data-book-sol href="https://wanderglamping.hospitable.rentals/property/sol">Check availability</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="stay-card bali">
+            <div class="stay-content">
+              <div class="stay-labels">
+                <span class="stay-label">Reopening soon</span>
+                <span class="stay-label">Sleeps 4</span>
+                <span class="stay-label">850 sq ft</span>
+              </div>
+              <h3>The Bali Dome</h3>
+              <p>An expansive private dome with an 18-foot forest window, retractable skylight, imported Indonesian craftsmanship, and a hot tub under the stars.</p>
+              <div class="stay-actions">
+                <a class="btn btn-light" href="https://bali.gowanderglamping.com">Explore Bali <span class="arrow">→</span></a>
+                <button class="btn btn-outline-light" type="button" data-open-bali>Get reopening notice</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="credit-section" id="wander-credit">
+      <div class="wrap credit-grid">
+        <div class="credit-copy">
+          <div class="eyebrow">A better first Wander</div>
+          <h2>Unlock your $50 Wander Credit.</h2>
+          <p>Join the Wander list and we'll send you a $50 credit toward your first qualifying direct stay, plus first notice of last-minute openings and seasonal releases.</p>
+          <p class="credit-fine">Valid on a first direct booking of $600 or more. One credit per guest. Not combinable with other offers. Blackout dates may apply.</p>
+        </div>
+
+        <div class="form-card" id="credit-card">
+          <h3>Send my credit</h3>
+          <p>One email with your private offer, followed only by worthwhile openings and releases.</p>
+          <form class="lead-form" data-form-type="wander_credit">
+            <div class="field-row">
+              <div class="field">
+                <label for="credit-name">First name</label>
+                <input id="credit-name" name="first_name" autocomplete="given-name" required placeholder="Your name">
+              </div>
+              <div class="field">
+                <label for="credit-email">Email</label>
+                <input id="credit-email" name="email" type="email" autocomplete="email" required placeholder="you@email.com">
+              </div>
+            </div>
+            <input type="hidden" name="source" value="stay_site_credit">
+            <button class="btn btn-cedar" type="submit">Send My $50 Credit <span class="arrow">→</span></button>
+            <div class="consent">By submitting, you agree to receive Wander emails. Unsubscribe anytime. Offer terms apply.</div>
+            <div class="form-status" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="difference" id="why-wander">
+      <div class="wrap difference-grid">
+        <div class="difference-copy">
+          <div class="eyebrow">Why Wander</div>
+          <h2>Privacy is the luxury.</h2>
+          <p>Not a resort corridor. Not a crowded campground. Each Wander stay is designed to make the world feel quieter without asking you to sacrifice comfort or beauty.</p>
+        </div>
+
+        <div class="difference-list">
+          <article class="difference-item">
+            <div class="difference-num">01</div>
+            <div><h3>Architecture worth traveling for</h3><p>SOL's award-recognized O-Frame and the Bali Dome create an experience that begins before you unpack.</p></div>
+          </article>
+          <article class="difference-item">
+            <div class="difference-num">02</div>
+            <div><h3>Space that feels truly yours</h3><p>Fifteen wooded acres near Paris, Texas, with private outdoor areas and no shared resort lobby or crowded amenity deck.</p></div>
+          </article>
+          <article class="difference-item">
+            <div class="difference-num">03</div>
+            <div><h3>Designed around how you want to feel</h3><p>Hot water, warm light, natural materials, forest views, and enough stillness to remember why you came together.</p></div>
+          </article>
+          <article class="difference-item">
+            <div class="difference-num">04</div>
+            <div><h3>Close enough to actually go</h3><p>Only 90 minutes from Dallas, so the city can disappear without losing half your getaway to the drive.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="split-story" aria-label="Cabin SOL design story">
+      <div class="split-image">
+        <img src="https://sol.gowanderglamping.com/images/sol/bed.jpg" alt="Warm wood interior and bed inside Cabin SOL" loading="lazy">
+      </div>
+      <div class="split-copy">
+        <div class="split-inner">
+          <div class="eyebrow">Architecture you can sleep in</div>
+          <h2>A cabin that refuses the expected.</h2>
+          <p>Designed by Mexico City architecture studio oioioi and fabricated by Peregrino, SOL replaces the familiar box with curves, circular openings, and framed views. Its design was recognized by AD México and featured by Dwell before arriving in East Texas.</p>
+          <div class="press-chips">
+            <span class="press-chip">Featured in Dwell</span>
+            <span class="press-chip">AD México Design Award</span>
+            <span class="press-chip">First U.S. O-Frame</span>
+          </div>
+          <a class="btn btn-dark" style="margin-top:28px" href="https://sol.gowanderglamping.com">See inside SOL <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="giveaway" id="win-sol">
+      <div class="wrap giveaway-grid">
+        <div class="giveaway-copy">
+          <div class="eyebrow" style="color:#dfb07d">Win SOL after sunset</div>
+          <h2>Two quiet nights.<br>On us.</h2>
+          <p>Enter for a chance to experience Cabin SOL with someone who deserves a real pause. One winner will receive a complimentary two-night stay on eligible dates.</p>
+          <div class="giveaway-steps">
+            <div class="giveaway-step"><span>1</span> Follow @wanderglamping on Instagram</div>
+            <div class="giveaway-step"><span>2</span> Enter below with your email and ZIP code</div>
+            <div class="giveaway-step"><span>3</span> Tag your travel partner on the pinned giveaway post</div>
+          </div>
+        </div>
+
+        <div class="form-card" id="giveaway-card">
+          <h3>Enter the SOL drawing</h3>
+          <p>Tell us where you're coming from and when you would most want to escape.</p>
+          <form class="lead-form" data-form-type="sol_giveaway">
+            <div class="field-row">
+              <div class="field">
+                <label for="giveaway-name">First name</label>
+                <input id="giveaway-name" name="first_name" autocomplete="given-name" required placeholder="Your name">
+              </div>
+              <div class="field">
+                <label for="giveaway-email">Email</label>
+                <input id="giveaway-email" name="email" type="email" autocomplete="email" required placeholder="you@email.com">
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="giveaway-zip">ZIP code</label>
+                <input id="giveaway-zip" name="zip_code" inputmode="numeric" autocomplete="postal-code" required placeholder="75034" pattern="[0-9]{5}(-[0-9]{4})?">
+              </div>
+              <div class="field">
+                <label for="giveaway-season">Preferred season</label>
+                <select id="giveaway-season" name="preferred_season" required>
+                  <option value="" selected disabled>Choose one</option>
+                  <option>Summer</option>
+                  <option>Fall</option>
+                  <option>Winter</option>
+                  <option>Spring</option>
+                </select>
+              </div>
+            </div>
+            <input type="hidden" name="source" value="stay_site_giveaway">
+            <button class="btn btn-cedar" type="submit">Enter to Win <span class="arrow">→</span></button>
+            <div class="consent">No purchase necessary. Eligibility, drawing timing, blackout dates, and complete terms are provided in the <a href="https://gowanderglamping.com/giveaway-rules" target="_blank" rel="noopener">Official Rules</a>.</div>
+            <div class="form-status" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="location" id="location">
+      <div class="wrap location-grid">
+        <div class="location-copy">
+          <div class="eyebrow">90 minutes away. A world apart.</div>
+          <h2>East Texas, closer than you think.</h2>
+          <p>Wander sits outside Paris, Texas, surrounded by pine, juniper, oak, and open sky. Historic downtown Paris is close enough for dinner, but most guests arrive, exhale, and never feel the need to leave.</p>
+          <div class="distance-list">
+            <div class="distance"><strong>1.5 hrs</strong><span>Dallas</span></div>
+            <div class="distance"><strong>3 hrs</strong><span>Oklahoma City</span></div>
+            <div class="distance"><strong>3.5 hrs</strong><span>Austin</span></div>
+            <div class="distance"><strong>4 hrs</strong><span>Houston</span></div>
+          </div>
+          <a class="btn btn-outline-dark" style="margin-top:25px" href="https://www.google.com/maps/search/?api=1&amp;query=10245+Farm+To+Market+Rd+1497+Paris+TX+75462" target="_blank" rel="noopener">See the area <span class="arrow">→</span></a>
+        </div>
+
+        <div class="location-art">
+          <img src="https://sol.gowanderglamping.com/images/sol/deckwide.jpg" alt="Cabin SOL surrounded by trees in East Texas" loading="lazy">
+          <div class="location-badge">
+            <strong>Paris, Texas</strong>
+            <span>Private directions and arrival details are shared after booking.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews" id="reviews">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">What guests remember</div>
+          <h2>They came for the cabin.<br>They left with a story.</h2>
+        </div>
+        <div class="review-grid">
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <blockquote>“Everything was so well thought out. The finishes look like they came straight out of a magazine.”</blockquote>
+            <cite>Teresa · Terrell, Texas · Cabin SOL</cite>
+          </article>
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <blockquote>“The property exceeded expectations. The cabin, hot tub, sauna, and the quiet were a 10/10.”</blockquote>
+            <cite>Al · Princeton, Texas · Cabin SOL</cite>
+          </article>
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <blockquote>“Hands down the best Airbnb experience we've ever had.”</blockquote>
+            <cite>Cassie · The Bali Dome</cite>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" id="faq">
+      <div class="wrap faq-grid">
+        <div class="faq-copy">
+          <div class="eyebrow">Before you disappear</div>
+          <h2>A few useful answers.</h2>
+          <p>Need something else? Email <a href="mailto:info@gowanderglamping.com">info@gowanderglamping.com</a> and we'll help.</p>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>How far is Wander from Dallas?</summary>
+            <p>Approximately 90 minutes by car, depending on your starting point and traffic. Wander is located near Paris, Texas.</p>
+          </details>
+          <details>
+            <summary>Which stay should I choose?</summary>
+            <p>Choose Cabin SOL for a design-forward romantic escape for two with a private cedar hot tub and sauna. Choose the Bali Dome for substantially more interior space, two bedrooms, and room for up to four guests.</p>
+          </details>
+          <details>
+            <summary>Is Cabin SOL private?</summary>
+            <p>Yes. SOL has its own private outdoor living area, cedar hot tub, glass-front sauna, fire feature, and outdoor shower surrounded by the East Texas landscape.</p>
+          </details>
+          <details>
+            <summary>What does the $50 Wander Credit cover?</summary>
+            <p>The credit is intended for a qualifying first direct booking of at least $600. It cannot be combined with another promotion, has no cash value, and may exclude holidays or other blackout dates.</p>
+          </details>
+          <details>
+            <summary>Why book directly?</summary>
+            <p>Direct guests receive access to Wander-only offers and communicate directly with the hosting team. Always compare the complete checkout total and cancellation terms before booking.</p>
+          </details>
+          <details>
+            <summary>Is the Bali Dome currently available?</summary>
+            <p>The Bali Dome is temporarily offline for restoration. Join the reopening list and we'll notify you before new dates are released publicly.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-credit">
+      <div class="wrap final-credit-inner">
+        <div class="eyebrow" style="color:#fff">Not ready to choose dates?</div>
+        <h2>Keep Wander within reach.</h2>
+        <p>Unlock your $50 direct-booking credit and receive first notice when the right dates open up.</p>
+        <button class="btn btn-light" type="button" data-open-credit>Send My Wander Credit <span class="arrow">→</span></button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <strong>WANDER</strong>
+        <p>Architecture-forward private escapes near Paris, Texas.<br>© 2026 Wander Glamping.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://www.instagram.com/wanderglamping/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.tiktok.com/@wanderglamping" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://gowanderglamping.com/faq">FAQ</a>
+        <a href="https://gowanderglamping.com/privacy-policy">Privacy</a>
+        <a href="mailto:info@gowanderglamping.com">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="sticky-bar" id="sticky-bar" aria-label="Booking actions">
+    <div class="wrap sticky-inner">
+      <div class="sticky-copy">
+        <strong>Ready for a quieter kind of getaway?</strong>
+        <span>See live Cabin SOL availability and complete pricing.</span>
+      </div>
+      <div class="sticky-actions">
+        <button class="btn btn-outline-dark" type="button" data-open-credit>Get $50 Credit</button>
+        <a class="btn btn-dark" data-book-sol href="https://wanderglamping.hospitable.rentals/property/sol">Check SOL Dates <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="credit-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="credit-modal-title">
+    <div class="modal-panel">
+      <button class="modal-close" type="button" data-close-modal aria-label="Close">×</button>
+      <div class="modal-image"><img src="https://sol.gowanderglamping.com/images/sol/dininghoriz.jpg" alt="Dining setup at Cabin SOL" loading="lazy"></div>
+      <div class="modal-content">
+        <div class="eyebrow">Your first Wander</div>
+        <h3 id="credit-modal-title">Unlock $50 toward your stay.</h3>
+        <p>We'll email your private credit along with first notice of worthwhile openings.</p>
+        <form class="lead-form" data-form-type="wander_credit_modal">
+          <div class="field-row">
+            <div class="field"><label for="modal-name">First name</label><input id="modal-name" name="first_name" autocomplete="given-name" required placeholder="Your name"></div>
+            <div class="field"><label for="modal-email">Email</label><input id="modal-email" name="email" type="email" autocomplete="email" required placeholder="you@email.com"></div>
+          </div>
+          <input type="hidden" name="source" value="stay_site_credit_modal">
+          <button class="btn btn-cedar" type="submit">Send My $50 Credit <span class="arrow">→</span></button>
+          <div class="consent">Valid on a qualifying first direct booking. Offer terms apply. Unsubscribe anytime.</div>
+          <div class="form-status" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="bali-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="bali-modal-title">
+    <div class="modal-panel">
+      <button class="modal-close" type="button" data-close-modal aria-label="Close">×</button>
+      <div class="modal-image"><img src="https://bali.gowanderglamping.com/photo3.jpg" alt="Interior of the Bali Dome" loading="lazy"></div>
+      <div class="modal-content">
+        <div class="eyebrow">Reopening list</div>
+        <h3 id="bali-modal-title">Be first back inside Bali.</h3>
+        <p>We'll let you know before the Bali Dome's new dates are released publicly.</p>
+        <form class="lead-form" data-form-type="bali_reopening">
+          <div class="field-row">
+            <div class="field"><label for="bali-name">First name</label><input id="bali-name" name="first_name" autocomplete="given-name" required placeholder="Your name"></div>
+            <div class="field"><label for="bali-email">Email</label><input id="bali-email" name="email" type="email" autocomplete="email" required placeholder="you@email.com"></div>
+          </div>
+          <input type="hidden" name="source" value="stay_site_bali_reopening">
+          <button class="btn btn-dark" type="submit">Join the Reopening List <span class="arrow">→</span></button>
+          <div class="consent">We'll send reopening news and occasional Wander updates. Unsubscribe anytime.</div>
+          <div class="form-status" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    /* ================================================================
+       WANDER CONFIGURATION
+       Replace leadEndpoint with your Make webhook or server endpoint.
+       It must accept a JSON POST body. Keep it blank during design review.
+       ================================================================ */
+    const CONFIG = {
+      leadEndpoint: "",
+      solBookingUrl: "https://wanderglamping.hospitable.rentals/property/sol",
+      baliUrl: "https://bali.gowanderglamping.com",
+      contactEmail: "info@gowanderglamping.com"
+    };
+
+    const track = (event, params = {}) => {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event, ...params });
+    };
+
+    const query = new URLSearchParams(window.location.search);
+    const attribution = {
+      page_path: window.location.pathname,
+      page_url: window.location.href,
+      referrer: document.referrer || "direct",
+      utm_source: query.get("utm_source") || "",
+      utm_medium: query.get("utm_medium") || "",
+      utm_campaign: query.get("utm_campaign") || "",
+      utm_content: query.get("utm_content") || ""
+    };
+
+    document.querySelectorAll("[data-book-sol]").forEach(link => {
+      link.href = CONFIG.solBookingUrl;
+      link.addEventListener("click", () => track("stay_booking_click", { property: "sol", placement: link.closest(".sticky-bar") ? "sticky" : "page", ...attribution }));
+    });
+
+    const openModal = id => {
+      const modal = document.getElementById(id);
+      if (!modal) return;
+      modal.classList.add("open");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.classList.add("modal-open");
+      setTimeout(() => modal.querySelector("input")?.focus(), 100);
+      track("stay_modal_open", { modal: id, ...attribution });
+    };
+
+    const closeModal = modal => {
+      modal.classList.remove("open");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("modal-open");
+    };
+
+    document.querySelectorAll("[data-open-credit]").forEach(button => button.addEventListener("click", () => openModal("credit-modal")));
+    document.querySelectorAll("[data-open-bali]").forEach(button => button.addEventListener("click", () => openModal("bali-modal")));
+    document.querySelectorAll("[data-close-modal]").forEach(button => button.addEventListener("click", () => closeModal(button.closest(".modal"))));
+    document.querySelectorAll(".modal").forEach(modal => modal.addEventListener("click", event => { if (event.target === modal) closeModal(modal); }));
+    document.addEventListener("keydown", event => { if (event.key === "Escape") document.querySelectorAll(".modal.open").forEach(closeModal); });
+
+    const setStatus = (form, type, message) => {
+      const status = form.querySelector(".form-status");
+      status.className = `form-status ${type}`;
+      status.textContent = message;
+    };
+
+    document.querySelectorAll(".lead-form").forEach(form => {
+      form.addEventListener("submit", async event => {
+        event.preventDefault();
+        if (!form.reportValidity()) return;
+
+        const button = form.querySelector("button[type='submit']");
+        const original = button.innerHTML;
+        const formType = form.dataset.formType;
+        const payload = Object.fromEntries(new FormData(form).entries());
+        Object.assign(payload, attribution, { form_type: formType, submitted_at: new Date().toISOString() });
+
+        button.disabled = true;
+        button.textContent = "Sending…";
+        setStatus(form, "", "");
+
+        if (!CONFIG.leadEndpoint) {
+          button.disabled = false;
+          button.innerHTML = original;
+          setStatus(form, "error", `This form is ready but still needs its MailerLite/Make connection. Please email ${CONFIG.contactEmail} for now.`);
+          track("stay_form_unconfigured", { form_type: formType, ...attribution });
+          return;
+        }
+
+        try {
+          const response = await fetch(CONFIG.leadEndpoint, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload)
+          });
+          if (!response.ok) throw new Error(`Request failed: ${response.status}`);
+
+          const isGiveaway = formType.includes("giveaway");
+          const isBali = formType.includes("bali");
+          setStatus(form, "success", isGiveaway ? "You're entered. Watch your inbox for confirmation." : isBali ? "You're on the reopening list. We'll let you know first." : "Your Wander Credit is on its way. Check your inbox.");
+          form.reset();
+          track("generate_lead", { lead_type: formType, ...attribution });
+          if (typeof window.clarity === "function") window.clarity("event", `lead_${formType}`);
+        } catch (error) {
+          setStatus(form, "error", `Something went wrong. Please try again or email ${CONFIG.contactEmail}.`);
+          track("stay_form_error", { form_type: formType, error_message: String(error), ...attribution });
+        } finally {
+          button.disabled = false;
+          button.innerHTML = original;
+        }
+      });
+    });
+
+    const sticky = document.getElementById("sticky-bar");
+    const toggleSticky = () => sticky.classList.toggle("visible", window.scrollY > Math.max(500, window.innerHeight * .75));
+    window.addEventListener("scroll", toggleSticky, { passive: true });
+    toggleSticky();
+
+    /* Campaign routes use one page but emphasize the relevant section. */
+    const routeTargets = {
+      "/win-sol": "win-sol",
+      "/giveaway": "win-sol",
+      "/wander-credit": "wander-credit",
+      "/save": "wander-credit",
+      "/find-your-escape": "stays",
+      "/booknow": "stays"
+    };
+    const routeTarget = routeTargets[window.location.pathname.replace(/\/$/, "")];
+    if (routeTarget) {
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          const section = document.getElementById(routeTarget);
+          section?.scrollIntoView({ behavior: "smooth", block: "start" });
+          const card = section?.querySelector(".form-card, .stay-card");
+          card?.classList.add("route-flash");
+          setTimeout(() => card?.classList.remove("route-flash"), 1500);
+        }, 450);
+      });
+    }
+  </script>
+</body>
+</html>
