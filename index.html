@@ -406,31 +406,33 @@
     @media (max-width: 640px) {
       .wrap { width: min(var(--max), calc(100% - 26px)); }
       section { padding: 72px 0; }
-      .hero { min-height: 100svh; align-items: flex-start; }
+      .hero { display: block; min-height: 100svh; }
       .hero::before { background: linear-gradient(180deg, rgba(7,13,9,.42) 0%, rgba(7,13,9,.55) 30%, rgba(7,13,9,.93) 100%), url("https://sol.gowanderglamping.com/images/sol/deckvertical.jpg") center 37% / cover no-repeat; }
-      .hero-top { padding-top: 18px; }
+      .hero-top { padding: 17px 0 0; }
+      .hero-top-inner { gap: 12px; }
       .wordmark strong { font-size: 1.04rem; }
       .wordmark span { font-size: .47rem; }
-      .ready-link { font-size: .7rem; }
-      .hero-inner { width: calc(100% - 26px); padding: 91px 0 89px; display: block; }
-      .hero-copy .micro { font-size: .63rem; }
-      .hero h1 { margin: 11px 0 14px; font-size: clamp(3.18rem, 15.7vw, 4.55rem); }
-      .hero-copy > p { font-size: .93rem; line-height: 1.48; }
-      .hero-detail { margin-top: 13px; font-size: .66rem; }
-      .hero-form-card { margin-top: 22px; padding: 21px 18px; border-radius: 17px; }
-      .hero-form-card::before { top: -14px; font-size: 4rem; }
-      .hero-form-card h2 { margin-bottom: 7px; font-size: 1.75rem; }
-      .hero-form-card > p { margin-bottom: 14px; font-size: .78rem; }
+      .ready-link { flex: 0 0 auto; font-size: .69rem; white-space: nowrap; }
+      .ready-prefix { display: none; }
+      .hero-inner { width: calc(100% - 32px); padding: 89px 0 24px; display: block; }
+      .hero-copy .micro { max-width: 290px; font-size: .58rem; line-height: 1.45; letter-spacing: .15em; }
+      .hero h1 { margin: 10px 0 12px; max-width: 360px; font-size: clamp(2.8rem, 12.8vw, 3.45rem); line-height: .96; letter-spacing: -.045em; }
+      .hero-copy > p { max-width: 355px; font-size: .88rem; line-height: 1.5; }
+      .hero-detail { margin-top: 12px; gap: 6px 12px; font-size: .62rem; }
+      .hero-form-card { width: 100%; margin-top: 20px; padding: 20px 17px 18px; border-radius: 17px; }
+      .hero-form-card::before { top: -10px; right: 12px; font-size: 3.55rem; }
+      .hero-form-card h2 { max-width: 285px; margin-bottom: 7px; font-size: 1.62rem; line-height: 1.08; }
+      .hero-form-card > p { max-width: 315px; margin-bottom: 14px; font-size: .76rem; line-height: 1.45; }
       .capture-form { gap: 8px; }
       .capture-form label { display: none; }
       .capture-form input { height: 49px; }
-      .capture-form .btn { min-height: 49px; }
+      .capture-form .btn { min-height: 49px; padding-inline: 12px; font-size: .86rem; white-space: nowrap; }
       .form-note { font-size: .61rem; }
       .booking-alternative { margin-top: 13px; }
-      .hero-authority { position: static; background: #101a13; border: 0; }
-      .authority-grid { width: calc(100% - 20px); min-height: 76px; grid-template-columns: repeat(2, 1fr); gap: 11px 4px; padding: 11px 0; }
-      .authority-item strong { font-size: .88rem; }
-      .authority-item span { font-size: .5rem; }
+      .hero-authority { position: relative; width: 100%; background: #101a13; border: 0; backdrop-filter: none; }
+      .authority-grid { width: calc(100% - 26px); min-height: auto; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 8px; padding: 17px 0 18px; }
+      .authority-item strong { font-size: .94rem; }
+      .authority-item span { max-width: 145px; margin: 3px auto 0; font-size: .49rem; line-height: 1.35; }
       .stay-grid { gap: 13px; }
       .stay-card { min-height: 560px; }
       .stay-card.sol::before { background-image: url("https://sol.gowanderglamping.com/images/sol/deckvertical.jpg"); }
@@ -480,7 +482,7 @@
             <strong>WANDER</strong>
             <span>Glamping</span>
           </a>
-          <a class="ready-link" data-book-wander href="https://wanderglamping.hospitable.rentals">Already ready? Check dates →</a>
+          <a class="ready-link" data-book-wander href="https://wanderglamping.hospitable.rentals"><span class="ready-prefix">Already ready? </span>Check dates →</a>
         </div>
       </div>
 
