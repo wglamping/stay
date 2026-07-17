@@ -4,19 +4,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Stay With Wander | Private Architectural Escapes Near Dallas</title>
-  <meta name="description" content="Unlock 10% off your first two-night direct stay at Wander Glamping, an architecture-forward private retreat 90 minutes from Dallas.">
+  <meta name="description" content="Unlock $100 off a direct stay at Wander Glamping, private architectural escapes 90 minutes from Dallas.">
   <meta name="theme-color" content="#142018">
-  <meta property="og:title" content="Your First Wander, 10% Less">
+  <meta property="og:title" content="Your Wander, $100 Less">
   <meta property="og:description" content="Private architectural escapes on 15 wooded acres, 90 minutes from Dallas.">
   <meta property="og:image" content="https://sol.gowanderglamping.com/images/sol/deckhoriz.jpg">
   <meta property="og:type" content="website">
 
   <!--
     BEFORE PUBLISHING
-    1. Add the Make/MailerLite webhook to CONFIG.leadEndpoint near the bottom.
-    2. Create a 10% promotion in Hospitable for first direct stays of 2+ nights.
-    3. Confirm CONFIG.bookingUrl.
-    4. Point stay.gowanderglamping.com to the Vercel deployment.
+    1. Add MAILERLITE_API_KEY, MAILERLITE_GROUP_ID, and ALLOWED_ORIGIN in Vercel.
+    2. Confirm CONFIG.bookingUrl.
+    3. Point stay.gowanderglamping.com to the Vercel deployment.
   -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -192,7 +191,7 @@
       box-shadow: var(--shadow);
     }
     .hero-form-card::before {
-      content: "10%";
+      content: "$100";
       position: absolute;
       right: 20px;
       top: -28px;
@@ -464,8 +463,8 @@
       <div class="hero-inner">
         <div class="hero-copy">
           <div class="micro">Paris, Texas · 90 minutes from Dallas</div>
-          <h1>Your first Wander,<br>10% less.</h1>
-          <p>Unlock a private rate for your first two-night direct stay at Cabin SOL, an award-recognized architectural retreat for two on 15 secluded acres.</p>
+          <h1>Your next Wander,<br>$100 less.</h1>
+          <p>Unlock $100 off a direct stay at Cabin SOL or the Bali Dome, private architectural escapes on 15 secluded acres.</p>
           <div class="hero-detail">
             <span>✦ Private cedar hot tub</span>
             <span>✦ Glass-front sauna</span>
@@ -475,7 +474,7 @@
 
         <div class="hero-form-card">
           <h2>Unlock your private Wander rate.</h2>
-          <p>Enter your email and we'll send your 10% direct-booking code immediately.</p>
+          <p>Enter your email and we'll send your $100 direct-booking code immediately.</p>
           <form class="capture-form" data-form-type="wander_rate_hero">
             <label for="hero-email">Email address</label>
             <div class="capture-row">
@@ -483,7 +482,8 @@
               <button class="btn btn-cedar" type="submit">Unlock My Wander Rate <span class="arrow">→</span></button>
             </div>
             <input type="hidden" name="source" value="stay_site_hero">
-            <div class="form-note">Valid on a qualifying first direct stay of two nights or more. Not combinable with other offers. Unsubscribe anytime.</div>
+            <div style="position:absolute;left:-9999px" aria-hidden="true"><label for="hero-website">Website</label><input id="hero-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+            <div class="form-note">No expiration. Cannot be combined with another discount. By submitting, you agree to receive Wander emails. Unsubscribe anytime.</div>
             <div class="form-status" role="status" aria-live="polite"></div>
           </form>
           <div class="booking-alternative">Prefer to choose dates now? <a data-book-wander href="https://wanderglamping.hospitable.rentals">View live availability</a></div>
@@ -533,7 +533,7 @@
                 <span class="stay-label">850 sq ft</span>
               </div>
               <h3>The Bali Dome</h3>
-              <p>An expansive private dome with an 18-foot forest window, retractable skylight, imported Indonesian craftsmanship, and a hot tub under the stars.</p>
+              <p>An expansive private dome with an 18-foot forest window, imported Indonesian craftsmanship, a spa-style bath, and a hot tub under the stars.</p>
               <div class="stay-actions">
                 <a class="btn btn-light" href="https://bali.gowanderglamping.com">Explore Bali <span class="arrow">→</span></a>
                 <a class="btn btn-outline-light" data-book-wander href="https://wanderglamping.hospitable.rentals">Check availability</a>
@@ -653,7 +653,7 @@
           <details><summary>How far is Wander from Dallas?</summary><p>Approximately 90 minutes by car, depending on your starting point and traffic. Wander is located near Paris, Texas.</p></details>
           <details><summary>Which stay should I choose?</summary><p>Choose Cabin SOL for a design-forward romantic escape for two with a private cedar hot tub and sauna. Choose the Bali Dome for substantially more interior space, two bedrooms, and room for up to four guests.</p></details>
           <details><summary>Is Cabin SOL private?</summary><p>Yes. SOL has its own private outdoor living area, cedar hot tub, glass-front sauna, fire feature, and outdoor shower surrounded by the East Texas landscape.</p></details>
-          <details><summary>How does the 10% private rate work?</summary><p>After subscribing, you will receive a direct-booking promotional code by email. It is valid on a qualifying first direct stay of two nights or more, cannot be combined with another promotion, and may exclude holidays or other blackout dates.</p></details>
+          <details><summary>How does the $100 private rate work?</summary><p>After subscribing, you will receive the direct-booking code WANDER100 by email. It is valid for Cabin SOL or the Bali Dome, has no expiration, and cannot be combined with another discount.</p></details>
           <details><summary>Why book directly?</summary><p>Direct guests receive access to Wander-only offers and communicate directly with the hosting team. Always compare the complete checkout total and cancellation terms before booking.</p></details>
           <details><summary>How do I see availability for both stays?</summary><p>Use our universal booking calendar to see current dates for both Cabin SOL and the Bali Dome. Select your dates and preferred stay there.</p></details>
         </div>
@@ -665,7 +665,7 @@
         <div class="final-copy">
           <div class="eyebrow" style="color:#d7ac79">Not ready to choose dates?</div>
           <h2>Keep Wander within reach.</h2>
-          <p>Unlock 10% off your first two-night direct stay and receive first notice of seasonal openings and occasional Wander offers.</p>
+          <p>Unlock $100 off a direct stay and receive first notice of seasonal openings and occasional Wander offers.</p>
         </div>
         <div class="final-form-card">
           <h3>Send my private rate</h3>
@@ -674,10 +674,11 @@
             <label for="footer-email">Email address</label>
             <div class="capture-row">
               <input id="footer-email" name="email" type="email" autocomplete="email" required placeholder="Email address">
-              <button class="btn btn-cedar" type="submit">Unlock 10% Off <span class="arrow">→</span></button>
+              <button class="btn btn-cedar" type="submit">Unlock $100 Off <span class="arrow">→</span></button>
             </div>
             <input type="hidden" name="source" value="stay_site_footer">
-            <div class="form-note">Valid on a qualifying first direct stay of two nights or more. Unsubscribe anytime.</div>
+            <div style="position:absolute;left:-9999px" aria-hidden="true"><label for="footer-website">Website</label><input id="footer-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+            <div class="form-note">No expiration. Cannot be combined with another discount. By submitting, you agree to receive Wander emails. Unsubscribe anytime.</div>
             <div class="form-status" role="status" aria-live="polite"></div>
           </form>
         </div>
@@ -702,16 +703,15 @@
     <div class="wrap sticky-inner">
       <div class="sticky-copy"><strong>Ready for a quieter kind of getaway?</strong><span>See live Cabin SOL dates and complete pricing.</span></div>
       <div class="sticky-actions">
-        <a class="btn btn-outline-dark" href="#private-rate">Unlock 10% Off</a>
+        <a class="btn btn-outline-dark" href="#private-rate">Unlock $100 Off</a>
         <a class="btn btn-dark" data-book-wander href="https://wanderglamping.hospitable.rentals">Check All Dates <span class="arrow">→</span></a>
       </div>
     </div>
   </div>
 
   <script>
-    /* Add your Make/MailerLite JSON webhook here before publishing. */
     const CONFIG = {
-      leadEndpoint: "",
+      leadEndpoint: "/api/subscribe",
       bookingUrl: "https://wanderglamping.hospitable.rentals",
       contactEmail: "info@gowanderglamping.com"
     };
@@ -733,7 +733,11 @@
     };
 
     document.querySelectorAll("[data-book-wander]").forEach(link => {
-      link.href = CONFIG.bookingUrl;
+      const bookingUrl = new URL(CONFIG.bookingUrl);
+      ["utm_source", "utm_medium", "utm_campaign", "utm_content"].forEach(key => {
+        if (attribution[key]) bookingUrl.searchParams.set(key, attribution[key]);
+      });
+      link.href = bookingUrl.toString();
       link.addEventListener("click", () => track("stay_booking_click", {
         property: "all_stays",
         placement: link.closest(".hero") ? "hero" : link.closest(".sticky-bar") ? "sticky" : "page",
@@ -741,10 +745,11 @@
       }));
     });
 
-    const setStatus = (form, type, message) => {
+    const setStatus = (form, type, message, allowHtml = false) => {
       const status = form.querySelector(".form-status");
       status.className = `form-status ${type}`;
-      status.textContent = message;
+      if (allowHtml) status.innerHTML = message;
+      else status.textContent = message;
     };
 
     document.querySelectorAll(".capture-form").forEach(form => {
@@ -758,21 +763,13 @@
         const payload = Object.fromEntries(new FormData(form).entries());
         Object.assign(payload, attribution, {
           form_type: formType,
-          offer: "10_percent_first_direct_stay_2plus_nights",
+          offer: "wander100_both_stays_no_expiration",
           submitted_at: new Date().toISOString()
         });
 
         button.disabled = true;
         button.textContent = "Sending…";
         setStatus(form, "", "");
-
-        if (!CONFIG.leadEndpoint) {
-          button.disabled = false;
-          button.innerHTML = original;
-          setStatus(form, "error", `The design is ready, but this form still needs its MailerLite/Make connection. Please email ${CONFIG.contactEmail} for now.`);
-          track("stay_form_unconfigured", { form_type: formType, ...attribution });
-          return;
-        }
 
         try {
           const response = await fetch(CONFIG.leadEndpoint, {
@@ -782,7 +779,7 @@
           });
           if (!response.ok) throw new Error(`Request failed: ${response.status}`);
 
-          setStatus(form, "success", "Your private Wander rate is on its way. Check your inbox.");
+          setStatus(form, "success", `Success—your code is <strong>WANDER100</strong>. Check your inbox, or <a href="${CONFIG.bookingUrl}">view available dates now</a>.`, true);
           form.reset();
           track("generate_lead", { lead_type: formType, offer: payload.offer, ...attribution });
           if (typeof window.clarity === "function") window.clarity("event", `lead_${formType}`);
