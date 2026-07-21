@@ -708,19 +708,19 @@
 <section class="reviews" id="reviews" aria-labelledby="reviews-title">
       <div class="wrap review-head-row">
         <div class="section-head">
-          <div class="eyebrow" style="color:#d7ac79">Airbnb guest reviews</div>
+          <div class="eyebrow" style="color:#d7ac79">Guest reviews</div>
           <h2 id="reviews-title">Loved by guests.<br>Designed to be remembered.</h2>
           <p>What guests remember most about their Wander stay.</p>
         </div>
         <button class="review-toggle" id="review-toggle" type="button" aria-pressed="false">Pause reviews</button>
       </div>
 
-      <div class="review-marquee" id="review-marquee" aria-label="Scrolling Airbnb guest reviews" tabindex="0">
+      <div class="review-marquee" id="review-marquee" aria-label="Scrolling guest reviews from Airbnb, Google, and Facebook" tabindex="0">
         <div class="review-track" id="review-track"></div>
       </div>
 
       <div class="wrap review-proof" aria-label="Wander review credentials">
-        <span><strong>★★★★★</strong> Airbnb guest reviews</span>
+        <span><strong>★★★★★</strong> Reviews from Airbnb, Google &amp; Facebook</span>
         <span>100+ Wander guests</span>
       </div>
     </section>
@@ -979,64 +979,76 @@
 
     const REVIEWS = [
       {
-        quote: "Everything was so well thought out. The finishes look like they came straight out of a magazine.",
+        quote: "Such a beautiful and well-thought-out place. It is truly inspiring and unique. The finishes were out of a magazine.",
         guest: "Teresa",
-        location: "Terrell, Texas"
+        location: "Terrell, Texas",
+        source: "Airbnb"
       },
       {
-        quote: "The property exceeded expectations. The cabin, hot tub, sauna, and the quiet were a 10/10.",
+        quote: "This cabin exceeded all of our expectations and was truly a 10/10 experience. The privacy made it feel like our own little paradise surrounded by nature.",
         guest: "Al",
-        location: "Princeton, Texas"
+        location: "Princeton, Texas",
+        source: "Airbnb"
       },
       {
-        quote: "It was peaceful, relaxing, and exactly what we needed. We spent two days here and honestly were not ready to leave. The space was beautiful and made the whole experience feel special.",
-        guest: "Amber",
-        location: "Airbnb guest"
+        quote: "This was hands-down the best Airbnb experience we have had to date. Everything felt fresh, cozy, high-end, and thoughtfully prepared.",
+        guest: "Cassandra",
+        location: "Houston, Texas",
+        source: "Airbnb"
       },
       {
-        quote: "It’s the PERFECT getaway stay. Such a unique and different place in the best way possible.",
-        guest: "Giovanni",
-        location: "Bentonville, Arkansas"
-      },
-      {
-        quote: "Super relaxing for a quick couples weekend getaway! Ali is such a great host! We enjoyed our stay and will definitely be back!",
-        guest: "Isamar",
-        location: "Fort Worth, Texas"
-      },
-      {
-        quote: "The property was so relaxing and peaceful, especially with sounds of the wildlife around us.",
-        guest: "Ryan",
-        location: "Roanoke, Texas"
-      },
-      {
-        quote: "The space itself is stunning — aesthetically pleasing in every detail. You can really tell Ali put a lot of time and thought into the design, and it shows.",
+        quote: "The space itself is stunning and aesthetically pleasing in every detail. Comfort, style, and exceptional hospitality all in one stay.",
         guest: "Tatiana",
-        location: "Aubrey, Texas"
+        location: "Aubrey, Texas",
+        source: "Airbnb"
       },
       {
-        quote: "Absolutely amazing place. Beds were super comfortable and the design and furniture is gorgeous. This was one of the best Airbnb experiences we have ever had.",
-        guest: "Nick",
-        location: "The Colony, Texas"
+        quote: "It was the perfect getaway. Such a unique and different place in the best way possible. We left and already missed it.",
+        guest: "Giovanni",
+        location: "Bentonville, Arkansas",
+        source: "Airbnb"
       },
       {
-        quote: "Everything was considered to the tee and the extra luxuries were very nice and thoughtful. It’s glamping at its finest!",
-        guest: "Kari",
-        location: "Spring, Texas"
-      },
-      {
-        quote: "Everything was sensational!! What a wonderful place! Peace, tranquility, and everything was beautiful! We loved it and will be back.",
-        guest: "Mauro",
-        location: "Airbnb guest"
-      },
-      {
-        quote: "The place was exactly as pictured, every little thing you needed was thought of and was there.",
+        quote: "Every little thing you could need was thought of. The whole experience was peaceful, relaxing, and a true 10 out of 10.",
         guest: "Shahed",
-        location: "McKinney, Texas"
+        location: "McKinney, Texas",
+        source: "Airbnb"
       },
       {
-        quote: "Very unique stay. Host put a lot of work into the place to make it the perfect getaway. Very private and well maintained. Highly recommend!!",
-        guest: "Ryan",
-        location: "Airbnb guest"
+        quote: "Great location, close to Paris and very private. The exceptionally designed cabin and grounds are the very definition of glamping.",
+        guest: "Clyde Valentino",
+        location: "Google reviewer",
+        source: "Google"
+      },
+      {
+        quote: "We spent our 10-year anniversary here and it was absolutely perfect. From the attention to detail to the thoughtful anniversary card, we had the best experience.",
+        guest: "Marykay Aguilar",
+        location: "Google reviewer",
+        source: "Google"
+      },
+      {
+        quote: "The entire place is beautifully designed and incredibly comfortable. It was the perfect setting to relax and truly disconnect from the city.",
+        guest: "Fernando Moreno",
+        location: "Google reviewer",
+        source: "Google"
+      },
+      {
+        quote: "The decor was beautiful, the beds were incredibly comfortable, and the bathroom felt so luxurious. We would definitely stay again.",
+        guest: "Ambar",
+        location: "Google reviewer",
+        source: "Google"
+      },
+      {
+        quote: "Absolutely amazing. The beds were super comfortable, the design was gorgeous, and this was one of the best Airbnb experiences we have ever had.",
+        guest: "Nick",
+        location: "The Colony, Texas",
+        source: "Airbnb"
+      },
+      {
+        quote: "All the amenities were wonderful and super luxurious. The place was extremely clean and had everything we needed.",
+        guest: "Anita Irfan",
+        location: "Facebook recommendation",
+        source: "Facebook"
       }
     ];
 
@@ -1048,7 +1060,7 @@
       <article class="review-card">
         <div>
           <div class="review-card-top">
-            <span class="review-source">Airbnb review</span>
+            <span class="review-source">${review.source} review</span>
           </div>
           <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
           <blockquote>“${review.quote}”</blockquote>
