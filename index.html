@@ -37,7 +37,7 @@
       c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
       t=l.createElement(r);t.async=1;t.src='https://www.clarity.ms/tag/'+i;
       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window,document,'clarity','script','w3z38r6z3m');
+    })(window,document,'clarity','script','xo07evo13d');
   </script>
 
   <!-- Google Analytics 4 -->
@@ -334,12 +334,137 @@
     .location-badge span { display: block; margin-top: 5px; color: var(--muted); font-size: .72rem; }
 
     /* REVIEWS */
-    .reviews { background: var(--paper); }
-    .review-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-    .review-card { min-height: 295px; display: flex; flex-direction: column; padding: 26px; border-radius: 17px; background: var(--cream); }
-    .stars { color: var(--cedar); font-size: .79rem; letter-spacing: .13em; }
-    .review-card blockquote { flex: 1; margin: 19px 0; font-family: var(--serif); font-size: 1.34rem; line-height: 1.36; }
-    .review-card cite { color: var(--muted); font-size: .72rem; font-style: normal; }
+    .reviews {
+      overflow: hidden;
+      padding: 86px 0 92px;
+      background: var(--forest);
+      color: var(--white);
+    }
+    .reviews .section-head {
+      max-width: 850px;
+      margin-bottom: 34px;
+    }
+    .reviews .section-head h2 { margin-bottom: 17px; }
+    .reviews .section-head p {
+      max-width: 650px;
+      color: rgba(255,255,255,.64);
+    }
+    .review-head-row {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .review-toggle {
+      flex: 0 0 auto;
+      min-height: 40px;
+      padding: 0 15px;
+      border: 1px solid rgba(255,255,255,.24);
+      border-radius: 999px;
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.82);
+      font: inherit;
+      font-size: .72rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .review-toggle:hover,
+    .review-toggle:focus-visible {
+      border-color: rgba(255,255,255,.5);
+      background: rgba(255,255,255,.11);
+      outline: none;
+    }
+    .review-marquee {
+      width: 100%;
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding: 8px 0 14px;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+      -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 5%, #000 95%, transparent 100%);
+      mask-image: linear-gradient(90deg, transparent 0, #000 5%, #000 95%, transparent 100%);
+    }
+    .review-marquee::-webkit-scrollbar { display: none; }
+    .review-track {
+      display: flex;
+      width: max-content;
+      gap: 16px;
+      padding-inline: 21px;
+      animation: review-scroll 88s linear infinite;
+      will-change: transform;
+    }
+    .review-marquee:hover .review-track,
+    .review-marquee:focus-within .review-track,
+    .review-marquee.is-paused .review-track {
+      animation-play-state: paused;
+    }
+    .review-group {
+      display: flex;
+      gap: 16px;
+    }
+    .review-card {
+      flex: 0 0 clamp(320px, 31vw, 420px);
+      min-height: 265px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 25px;
+      border: 1px solid rgba(255,255,255,.13);
+      border-radius: 18px;
+      background: rgba(255,255,255,.075);
+      box-shadow: 0 20px 55px rgba(0,0,0,.15);
+      backdrop-filter: blur(9px);
+    }
+    .review-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .review-source {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: rgba(255,255,255,.82);
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+    }
+    .stars {
+      margin-top: 20px;
+      color: #e6b877;
+      font-size: .77rem;
+      letter-spacing: .14em;
+    }
+    .review-card blockquote {
+      flex: 1;
+      margin: 16px 0 24px;
+      font-family: var(--serif);
+      font-size: clamp(1.22rem, 2vw, 1.45rem);
+      line-height: 1.38;
+    }
+    .review-card cite {
+      display: block;
+      color: rgba(255,255,255,.58);
+      font-size: .7rem;
+      font-style: normal;
+    }
+    .review-proof {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px 18px;
+      margin-top: 19px;
+      color: rgba(255,255,255,.55);
+      font-size: .67rem;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .review-proof strong { color: rgba(255,255,255,.86); }
+    @keyframes review-scroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(calc(-50% - 8px)); }
+    }
 
     /* FAQ */
     .faq { background: var(--cream); }
@@ -399,7 +524,6 @@
       .architecture { grid-template-columns: 1fr; }
       .architecture-image { min-height: 560px; }
       .amenity-grid { grid-template-columns: 1fr 1fr; }
-      .review-grid { grid-template-columns: 1fr 1fr; }
       .location-image { min-height: 590px; }
     }
 
@@ -446,7 +570,16 @@
       .amenity { min-height: 190px; }
       .distance-grid { grid-template-columns: 1fr 1fr; }
       .location-image { min-height: 475px; border-radius: 130px 130px 18px 18px; }
-      .review-grid { grid-template-columns: 1fr; }
+      .reviews { padding: 68px 0 72px; }
+      .review-head-row { align-items: flex-start; }
+      .review-toggle { margin-top: 2px; padding-inline: 12px; font-size: .65rem; }
+      .review-marquee {
+        -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 3%, #000 97%, transparent 100%);
+        mask-image: linear-gradient(90deg, transparent 0, #000 3%, #000 97%, transparent 100%);
+      }
+      .review-track { padding-inline: 13px; animation-duration: 72s; }
+      .review-card { flex-basis: min(84vw, 345px); min-height: 255px; padding: 22px; }
+      .review-proof { justify-content: flex-start; gap: 6px 12px; font-size: .58rem; }
       .final-form-card { padding: 21px 18px; }
       .footer-grid { grid-template-columns: 1fr; align-items: start; }
       .footer-links { justify-content: flex-start; }
@@ -466,6 +599,8 @@
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+      .review-track { animation: none !important; transform: none !important; }
+      .review-group[aria-hidden="true"] { display: none; }
     }
   </style>
 </head>
@@ -570,7 +705,27 @@
       </div>
     </section>
 
-    <section class="why" id="why-wander">
+<section class="reviews" id="reviews" aria-labelledby="reviews-title">
+      <div class="wrap review-head-row">
+        <div class="section-head">
+          <div class="eyebrow" style="color:#d7ac79">Airbnb guest reviews</div>
+          <h2 id="reviews-title">Loved by guests.<br>Designed to be remembered.</h2>
+          <p>What guests remember most about their Wander stay.</p>
+        </div>
+        <button class="review-toggle" id="review-toggle" type="button" aria-pressed="false">Pause reviews</button>
+      </div>
+
+      <div class="review-marquee" id="review-marquee" aria-label="Scrolling Airbnb guest reviews" tabindex="0">
+        <div class="review-track" id="review-track"></div>
+      </div>
+
+      <div class="wrap review-proof" aria-label="Wander review credentials">
+        <span><strong>★★★★★</strong> Airbnb guest reviews</span>
+        <span>100+ Wander guests</span>
+      </div>
+    </section>
+
+        <section class="why" id="why-wander">
       <div class="wrap why-grid">
         <div class="why-copy">
           <div class="eyebrow">Why Wander</div>
@@ -650,20 +805,6 @@
         <div class="location-image">
           <img src="https://sol.gowanderglamping.com/images/sol/deckwide.jpg" alt="Cabin SOL surrounded by trees in East Texas" loading="lazy">
           <div class="location-badge"><strong>Paris, Texas</strong><span>Private arrival instructions are shared after booking.</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="reviews" id="reviews">
-      <div class="wrap">
-        <div class="section-head">
-          <div class="eyebrow">What guests remember</div>
-          <h2>They came for the cabin.<br>They left with a story.</h2>
-        </div>
-        <div class="review-grid">
-          <article class="review-card"><div class="stars">★★★★★</div><blockquote>“Everything was so well thought out. The finishes look like they came straight out of a magazine.”</blockquote><cite>Teresa · Terrell, Texas · Cabin SOL</cite></article>
-          <article class="review-card"><div class="stars">★★★★★</div><blockquote>“The property exceeded expectations. The cabin, hot tub, sauna, and the quiet were a 10/10.”</blockquote><cite>Al · Princeton, Texas · Cabin SOL</cite></article>
-          <article class="review-card"><div class="stars">★★★★★</div><blockquote>“Hands down the best Airbnb experience we've ever had.”</blockquote><cite>Cassie · The Bali Dome</cite></article>
         </div>
       </div>
     </section>
@@ -835,6 +976,111 @@
         }
       });
     });
+
+    const REVIEWS = [
+      {
+        quote: "Everything was so well thought out. The finishes look like they came straight out of a magazine.",
+        guest: "Teresa",
+        location: "Terrell, Texas"
+      },
+      {
+        quote: "The property exceeded expectations. The cabin, hot tub, sauna, and the quiet were a 10/10.",
+        guest: "Al",
+        location: "Princeton, Texas"
+      },
+      {
+        quote: "It was peaceful, relaxing, and exactly what we needed. We spent two days here and honestly were not ready to leave. The space was beautiful and made the whole experience feel special.",
+        guest: "Amber",
+        location: "Airbnb guest"
+      },
+      {
+        quote: "It’s the PERFECT getaway stay. Such a unique and different place in the best way possible.",
+        guest: "Giovanni",
+        location: "Bentonville, Arkansas"
+      },
+      {
+        quote: "Super relaxing for a quick couples weekend getaway! Ali is such a great host! We enjoyed our stay and will definitely be back!",
+        guest: "Isamar",
+        location: "Fort Worth, Texas"
+      },
+      {
+        quote: "The property was so relaxing and peaceful, especially with sounds of the wildlife around us.",
+        guest: "Ryan",
+        location: "Roanoke, Texas"
+      },
+      {
+        quote: "The space itself is stunning — aesthetically pleasing in every detail. You can really tell Ali put a lot of time and thought into the design, and it shows.",
+        guest: "Tatiana",
+        location: "Aubrey, Texas"
+      },
+      {
+        quote: "Absolutely amazing place. Beds were super comfortable and the design and furniture is gorgeous. This was one of the best Airbnb experiences we have ever had.",
+        guest: "Nick",
+        location: "The Colony, Texas"
+      },
+      {
+        quote: "Everything was considered to the tee and the extra luxuries were very nice and thoughtful. It’s glamping at its finest!",
+        guest: "Kari",
+        location: "Spring, Texas"
+      },
+      {
+        quote: "Everything was sensational!! What a wonderful place! Peace, tranquility, and everything was beautiful! We loved it and will be back.",
+        guest: "Mauro",
+        location: "Airbnb guest"
+      },
+      {
+        quote: "The place was exactly as pictured, every little thing you needed was thought of and was there.",
+        guest: "Shahed",
+        location: "McKinney, Texas"
+      },
+      {
+        quote: "Very unique stay. Host put a lot of work into the place to make it the perfect getaway. Very private and well maintained. Highly recommend!!",
+        guest: "Ryan",
+        location: "Airbnb guest"
+      }
+    ];
+
+    const reviewTrack = document.getElementById("review-track");
+    const reviewMarquee = document.getElementById("review-marquee");
+    const reviewToggle = document.getElementById("review-toggle");
+
+    const reviewCardMarkup = review => `
+      <article class="review-card">
+        <div>
+          <div class="review-card-top">
+            <span class="review-source">Airbnb review</span>
+          </div>
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>“${review.quote}”</blockquote>
+        </div>
+        <cite>${review.guest} · ${review.location}</cite>
+      </article>`;
+
+    if (reviewTrack && REVIEWS.length) {
+      const groupMarkup = REVIEWS.map(reviewCardMarkup).join("");
+      reviewTrack.innerHTML = `
+        <div class="review-group">${groupMarkup}</div>
+        <div class="review-group" aria-hidden="true">${groupMarkup}</div>`;
+    }
+
+    const setReviewPause = paused => {
+      if (!reviewMarquee || !reviewToggle) return;
+      reviewMarquee.classList.toggle("is-paused", paused);
+      reviewToggle.setAttribute("aria-pressed", String(paused));
+      reviewToggle.textContent = paused ? "Play reviews" : "Pause reviews";
+    };
+
+    if (reviewToggle) {
+      reviewToggle.addEventListener("click", () => {
+        setReviewPause(!reviewMarquee.classList.contains("is-paused"));
+      });
+    }
+
+    if (reviewMarquee) {
+      reviewMarquee.addEventListener("pointerdown", event => {
+        if (event.pointerType === "touch" || event.pointerType === "pen") setReviewPause(true);
+      }, { passive: true });
+    }
 
     const sticky = document.getElementById("sticky-bar");
     const toggleSticky = () => sticky.classList.toggle("visible", window.scrollY > Math.max(620, window.innerHeight * .9));
